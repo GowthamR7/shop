@@ -1,0 +1,37 @@
+{% extends 'shopapp/layouts/main.html' %}
+{% block title%}
+ShopKart | online shopping
+{%  endblock title%}
+
+{%block content%}
+{% include 'shopapp/inc/slider.html' %}
+<div class="container-fluid" style="padding:0px; margin-top:70px;">
+    <div class="row">
+        <div class="col-12">
+            <h4 style='text-align:center' class="mb-3"> Latest Offers</h4>
+            <hr style="border-color:#b8bfc2;">
+            <div class="container text-center">
+              <div class="row">
+        {% for item in products %}
+      
+      <div class="col-md-4 col-lg-3" style='display:flex; align-items: stretch'>
+        <div class="card my-3" style='display:flex; justify-content: space-evenly; width: -webkit-fill-available;'>
+          <img src="{{item.product_image.url}}"  class="card-image-top" alt="Categories">
+          <a href="{% url 'product_details' item.category.name item.name %}">
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ item.name }}</h5>
+            <p class="card-text">
+              <span class="float-start old_price"><s>Rs.{{ item.original_price | stringformat:'d'}}</s></span>
+              <span class="float-end new_price">Rs.{{ item.selling_price | stringformat:'d' }}</span>
+            </p>
+          </div>
+        </a>
+        </div>
+      </div>
+   
+      {% endfor %}
+    </div>
+  </div>
+    </div>
+</div>
+{% endblock content %}
