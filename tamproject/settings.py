@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': env("DB_NAME"),
         'USER': env("DATABASE_USER"),
         'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': env("DATABASE_HOST"),
+        'HOST': 'monorail.proxy.rlwy.net',
         'PORT': env("DATABASE_PORT")
     }
 }
