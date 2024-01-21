@@ -77,8 +77,8 @@ DATABASES = {
         'NAME': env("DB_NAME"),
         'USER': env("DATABASE_USER"),
         'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': 'monorail.proxy.rlwy.net',
-        'PORT': env("DATABASE_PORT")
+        'HOST': env("DATABASE_HOST"),
+        'PORT': env("DATABASE_PORT"),
     }
 }
 # DATABASES["default"]=dj_database_url.parse("postgres://prettyprinted_django_render_l00e_user:JfGDXMBDkCNCJEgMwXINRWc0nolm2AeA@dpg-cmd92pn109ks73962230-a.oregon-postgres.render.com/prettyprinted_django_render_l00e")
