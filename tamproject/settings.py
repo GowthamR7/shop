@@ -74,13 +74,14 @@ WSGI_APPLICATION = 'tamproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env("DB_NAME"),
-        'USER': env("DATABASE_USER"),
-        'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': env("DATABASE_HOST"),
-        'PORT': env("DATABASE_PORT"),
+        'NAME': 'railway',  # Your database name
+        'USER': 'postgres',  # Your database user
+        'PASSWORD': 'aEcc*616a6BeFAGG2C*bcdFEc5D1f633',  # Your database password
+        'HOST': 'monorail.proxy.rlwy.net',  # Your database host
+        'PORT': '50437',  # Your database port
     }
 }
+
 # DATABASES["default"]=dj_database_url.parse("postgres://prettyprinted_django_render_l00e_user:JfGDXMBDkCNCJEgMwXINRWc0nolm2AeA@dpg-cmd92pn109ks73962230-a.oregon-postgres.render.com/prettyprinted_django_render_l00e")
 
 # Password validation
