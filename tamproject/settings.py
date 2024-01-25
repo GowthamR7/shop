@@ -23,6 +23,7 @@ DEBUG = env("DJANGO_DEBUG")
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "shopcart.up.railway.app", "https://shopcart.up.railway.app"]
 CSRF_HOSTS = ['https://shopcart.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://shopcart.up.railway.app','https://*.127.0.0.1']
 
 
 # Application definition
