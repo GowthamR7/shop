@@ -22,7 +22,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = env("DJANGO_DEBUG")
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "shopcart.up.railway.app"]
-CSRF_HOSTS = ['https://shopcart.up.railway.app']
+CSRF_HOSTS = ['shopcart.up.railway.app']
 
 
 # Application definition
